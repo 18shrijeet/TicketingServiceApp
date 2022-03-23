@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta26
+kind: Config
+metadata:
+  name: ticketingserviceapp
+build:
+  artifacts:
+  - image: abhinavhegde98/authentication
+    jib:
+      project: com.ticketing:Authentication
+deploy:
+  kubectl:
+    manifests:
+    - Authentication/k8s/deployment.yaml
+    - Authentication/k8s/service.yaml

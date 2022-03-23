@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: authentication
+  name: authentication
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authentication
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: authentication
+    spec:
+      containers:
+        - image: abhinavhegde98/authentication
+          name: authentication
+          imagePullPolicy: IfNotPresent
+          resources: {}
+status: {}

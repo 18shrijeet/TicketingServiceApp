@@ -1,7 +1,12 @@
 package com.ticketing.auth;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
 public class AuthenticationApplication {
     public static void main(String[] args) {
-        System.out.println("Initial Commit");
+        SpringApplication.run(AuthenticationApplication.class, args);
     }
 }
